@@ -1,5 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Colors */
+  --bg-body: #f9fafb;
+  --purple: #8e48ff;
+  --yellow: #f2e800;
+  --black: #202020;
+  --white: #ffffff;
+
+  /* Fonts */
+  --font-family: "Open Sans", sans-serif;
+
+  /* Size */
+  --font-h1-mobile: 24px;
+  --font-h2-mobile: 22px;
+  --font-h3-mobile: 22px;
+  --font-title-mobile: 16px;
+  --font-p-mobile: 14px;
+  --font-plittle-mobile: 12px;
+
+  /* Containers */
+  --container-mobile: 16px;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  background: var(--bg-body) !important;
+  font-family: var(--font-family) !important;
 }
