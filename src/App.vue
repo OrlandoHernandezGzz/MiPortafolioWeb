@@ -5,4 +5,6 @@ import AboutMe from "./components/AboutMe.vue";
 
 <template>
   <Header></Header>
+
+  <AboutMe />
 </template>
