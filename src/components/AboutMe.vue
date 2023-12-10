@@ -2,7 +2,7 @@
 
 <template>
   <section class="about-me">
-    <div class="about-me__container">
+    <div class="about-me__container container">
       <div class="about-me__description">
         <h2 class="about-me__title">
           Soy <span>Desarrollador</span> de Software
@@ -15,36 +15,49 @@
         </p>
 
         <button class="about-me__btn-contact">Contáctame</button>
+
+        <div class="about-me__cards">
+          <div class="about-me__card">
+            <!-- icon -->
+            <font-awesome-icon
+              class="about-me__card-icon"
+              :icon="['fab', 'github']"
+            />
+            <p class="about-me__card-text">Github</p>
+          </div>
+
+          <div class="about-me__card">
+            <!-- icon -->
+            <font-awesome-icon
+              class="about-me__card-icon"
+              :icon="['fab', 'linkedin']"
+            />
+            <p class="about-me__card-text">LinkedIn</p>
+          </div>
+
+          <div class="about-me__card">
+            <!-- icon -->
+            <font-awesome-icon
+              class="about-me__card-icon"
+              :icon="['fas', 'file-pdf']"
+            />
+            <p class="about-me__card-text">CV</p>
+          </div>
+        </div>
       </div>
 
-      <div class="about-me__cards">
-        <div class="about-me__card">
-          <!-- icon -->
-          <font-awesome-icon class="about-me__card-icon" :icon="['fab', 'github']" />
-          <p class="about-me__card-text">Github</p>
-        </div>
-
-        <div class="about-me__card">
-          <!-- icon -->
-          <font-awesome-icon class="about-me__card-icon" :icon="['fab', 'linkedin']" />
-          <p class="about-me__card-text">LinkedIn</p>
-        </div>
-
-        <div class="about-me__card">
-          <!-- icon -->
-          <font-awesome-icon class="about-me__card-icon" :icon="['fas', 'file-pdf']" />
-          <p class="about-me__card-text">CV</p>
-        </div>
+      <div class="about-me__img">
+        <img
+          src="../assets/humandincomputer.svg"
+          class="img-fluid"
+          alt="humand in desktop"
+        />
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.about-me__container {
-  padding: var(--container-mobile);
-}
-
 .about-me__description {
   display: flex;
   flex-direction: column;
@@ -68,7 +81,7 @@
   background: var(--purple);
   color: var(--white);
   height: 40px;
-  width: 200px;
+  width: 10rem;
   border: none;
   border-radius: 10px;
   background: #8e48ff;
@@ -80,6 +93,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .about-me__card {
@@ -91,6 +106,7 @@
   justify-content: flex-end;
   align-items: center;
   gap: 4px;
+  cursor: pointer;
 
   border-radius: 10px;
   background: var(--white);
@@ -106,5 +122,90 @@
 .about-me__card-text {
   font-size: var(--font-p-mobile);
   font-weight: 400;
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+  .about-me__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-me__description {
+    width: 50%;
+  }
+
+  .about-me__img {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .about-me__btn-contact {
+    margin: 40px 0;
+  }
+
+  .about-me__description {
+    justify-content: start;
+    align-items: start;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about-me__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-me__description {
+    width: 50%;
+  }
+
+  .about-me__img {
+    width: 50%;
+  }
+
+  .about-me__btn-contact {
+    margin: 40px 0;
+  }
+
+  .about-me__description {
+    justify-content: start;
+    align-items: start;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-me__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-me__description {
+    width: 50%;
+  }
+
+  .about-me__img {
+    width: 50%;
+  }
+  .about-me__btn-contact {
+    margin: 20px 0;
+  }
+
+  .about-me__description {
+    justify-content: start;
+    align-items: start;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-me__img {
+    display: none;
+  }
+
+  .about-me__cards {
+    justify-content: space-around;
+  }
 }
 </style>

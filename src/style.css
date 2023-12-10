@@ -15,6 +15,9 @@
   --font-family: "Open Sans", sans-serif;
 
   /* Size */
+  --font-h1-desktop: 48px;
+  --font-title-desktop: 18px;
+
   --font-h1-mobile: 24px;
   --font-h2-mobile: 22px;
   --font-h3-mobile: 22px;
@@ -23,6 +26,7 @@
   --font-plittle-mobile: 12px;
 
   /* Containers */
+  --container-desktop: 20px 150px;
   --container-mobile: 16px;
 }
 
