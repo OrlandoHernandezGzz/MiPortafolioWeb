@@ -1,6 +1,4 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
   <section class="about-me">
@@ -22,18 +20,20 @@
       <div class="about-me__cards">
         <div class="about-me__card">
           <!-- icon -->
-          <font-awesome-icon :icon="['fab', 'github']" />
-          <p>Github</p>
+          <font-awesome-icon class="about-me__card-icon" :icon="['fab', 'github']" />
+          <p class="about-me__card-text">Github</p>
         </div>
 
         <div class="about-me__card">
           <!-- icon -->
-          <p>Linkedln</p>
+          <font-awesome-icon class="about-me__card-icon" :icon="['fab', 'linkedin']" />
+          <p class="about-me__card-text">LinkedIn</p>
         </div>
 
         <div class="about-me__card">
           <!-- icon -->
-          <p>CV</p>
+          <font-awesome-icon class="about-me__card-icon" :icon="['fas', 'file-pdf']" />
+          <p class="about-me__card-text">CV</p>
         </div>
       </div>
     </div>
@@ -71,6 +71,8 @@
   width: 200px;
   border: none;
   border-radius: 10px;
+  background: #8e48ff;
+  box-shadow: var(--shadow);
 }
 
 .about-me__cards {
@@ -80,14 +82,29 @@
   align-items: center;
 }
 
-/* TODO: Terminar las tarjetas de las redes sociales. */
 .about-me__card {
   background: var(--white);
-  width: 80px;
-  height: 64px;
   display: flex;
+  width: 80px;
+  padding: 16px 16px 0px 16px;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
+  gap: 4px;
+
+  border-radius: 10px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.about-me__card-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--purple);
+}
+
+.about-me__card-text {
+  font-size: var(--font-p-mobile);
+  font-weight: 400;
 }
 </style>
